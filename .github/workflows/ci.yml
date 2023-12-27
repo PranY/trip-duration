@@ -83,7 +83,7 @@ jobs:
       
       - name: Delete Previous Container
         run: |
-          docker rm -f creditcard || true
+          docker rm -f trip-duration || true
 
       - name: Run Docker Image to serve users
         run: |
