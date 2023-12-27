@@ -42,7 +42,7 @@ def predict(input_data: PredictionInput):
             'store_and_fwd_flag': input_data.store_and_fwd_flag
 }
     features = pd.DataFrame(features, index=[0])
-    features = feature_build(features)
+    features = feature_build(features, 'prod')
     prediction = model.predict(features)[0].item()
     # Return the prediction
     return {"prediction": prediction}
