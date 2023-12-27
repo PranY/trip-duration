@@ -1,0 +1,7 @@
+# external requirements
+fastapi
+joblib
+uvicorn
+scikit-learn
+pandas
+xgboost
