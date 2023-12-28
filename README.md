@@ -1,7 +1,7 @@
 trip-duration
 ==============================
 
-A sample ML project to build an end-to-end working app for the NYC traxi trip duration challenge.
+A sample ML project to build an end-to-end working app for the NYC traxi trip duration challenge. A working setup demo is fully recorded.
 
 Project Organization
 ------------
