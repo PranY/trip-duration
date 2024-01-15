@@ -1,0 +1,27 @@
+apiVersion: machinelearning.seldon.io/v1
+kind: SeldonDeployment
+metadata:
+  name: trip-duration
+spec:
+  name: trip-duration
+  predictors:
+  - componentSpecs:
+    - spec:
+        containers:
+        - name: trip-duration
+          image: trip-duration:v1
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+          ports:
+          - containerPort: 8080
+            name: http
+    graph:
+      children: []
+      endpoint:
+        type: REST
+      name: trip-duration
+      type: MODEL
+    name: trip-duration
+    replicas: 1

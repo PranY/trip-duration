@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trip-duration
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: trip-duration
+  template:
+    metadata:
+      labels:
+        app: trip-duration
+    spec:
+      containers:
+      - name: trip-duration
+        image: trip-duration:v1
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trip-duration
+spec:
+  selector:
+    app: trip-duration
+  ports:
+  - port: 1234
+    targetPort: 8080
+

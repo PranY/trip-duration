@@ -29,8 +29,8 @@ if __name__ == '__main__':
 
     output_path = home_dir.as_posix() + '/data/processed'
 
-    train_data = feature_build(train_data, 'train')
-    test_data = feature_build(test_data, 'test')
+    train_data = feature_build(train_data, 'train-data')
+    test_data = feature_build(test_data, 'test-data')
 
     save_data(train_data, test_data, output_path)
 
