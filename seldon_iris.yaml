@@ -5,13 +5,20 @@ metadata:
 spec:
   predictors:
   - name: modela
-    traffic: 70
+    traffic: 20
     replicas: 1
     graph:
       name: classifier
       implementation: SKLEARN_SERVER
       modelUri: gs://seldon-models/v1.15.0-dev/sklearn/iris
   - name: modelb
+    traffic: 50
+    replicas: 1
+    graph:
+      name: classifier
+      implementation: SKLEARN_SERVER
+      modelUri: gs://seldon-models/v1.15.0-dev/sklearn/iris
+  - name: modelc
     traffic: 30
     replicas: 1
     graph:
